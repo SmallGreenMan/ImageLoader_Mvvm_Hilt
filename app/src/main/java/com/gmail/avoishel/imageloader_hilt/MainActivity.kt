@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     @Inject
-    lateinit var picasso: Picasso
+    lateinit var picassoUtil: PicassoUtil
 
     private val viewModel: MainActivityViewModel by lazy {
         ViewModelProvider(this).get(MainActivityViewModel::class.java)
@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.imageUrlLiveData.observe(this) { imageUrl ->
-
-            picasso.load(imageUrl).into(binding.imageView)
+            //picasso.load(imageUrl).into(binding.imageView)
+            picassoUtil.loadImage(imageUrl, binding.imageView)
         }
     }
 }
