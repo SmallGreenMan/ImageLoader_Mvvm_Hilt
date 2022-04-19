@@ -5,7 +5,10 @@ import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.gmail.avoishel.imageloader_hilt.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
+import dagger.hilt.EntryPoint
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainActivityViewModel by lazy {

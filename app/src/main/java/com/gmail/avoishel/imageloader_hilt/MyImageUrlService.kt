@@ -1,6 +1,8 @@
 package com.gmail.avoishel.imageloader_hilt
 
-class MyImageUrlService {
+import javax.inject.Inject
+
+class MyImageUrlService @Inject constructor(){
 
     private val imageUrlList = listOf(
         "https://images.freeimages.com/images/small-previews/a31/colorful-umbrella-1176220.jpg",

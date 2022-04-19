@@ -1,8 +1,10 @@
 package com.gmail.avoishel.imageloader_hilt
 
-class MyImageRepository {
+import javax.inject.Inject
 
-    private val service = MyImageUrlService()
+class MyImageRepository @Inject constructor(
+    private val service: MyImageUrlService
+) {
 
     fun getRandomImageUrl(): String{
         return service.getImageUrl()
